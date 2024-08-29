@@ -62,8 +62,10 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     //-------------------------------------------
+    //LiveData
     implementation(libs.androidx.runtime.livedata)
-    implementation(libs.androidx.lifecycle.runtime)
+    //Splash
+    implementation(libs.androidx.core.splashscreen)
     //-------------------------------------------
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
