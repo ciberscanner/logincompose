@@ -25,6 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -103,7 +104,7 @@ fun PasswordFile(password: String, onTextFieldChanged: (String) -> Unit) {
     TextField(value = password, onValueChange = {onTextFieldChanged(it)},
         modifier = Modifier.fillMaxWidth(),
         placeholder = { Text(text = "Password") },
-        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password, imeAction = ImeAction.Done),
         singleLine = true,
         maxLines = 1,
         colors = TextFieldDefaults.colors(focusedTextColor = Color(0xFF0A2BE7) ,unfocusedTextColor = Color(0xFF0A2BE7), focusedContainerColor = Color.LightGray, unfocusedContainerColor = Color.LightGray),
@@ -116,7 +117,7 @@ fun EmailField(email: String, onTextFieldChanged:(String)-> Unit) {
         value = email, onValueChange = {onTextFieldChanged(it)},
         modifier = Modifier.fillMaxWidth(),
         placeholder = { Text(text = "Email") },
-        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email, imeAction = ImeAction.Next),
         singleLine = true,
         maxLines = 1,
         colors = TextFieldDefaults.colors(focusedTextColor = Color(0xFF0A2BE7) ,unfocusedTextColor = Color(0xFF0A2BE7), focusedContainerColor = Color.LightGray, unfocusedContainerColor = Color.LightGray),
